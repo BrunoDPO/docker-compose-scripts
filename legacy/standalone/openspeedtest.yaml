@@ -1,0 +1,9 @@
+services:
+  openspeedtest-service:
+    container_name: openspeedtest
+    image: openspeedtest/latest
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - 3000:3000
+      - 3001:3001

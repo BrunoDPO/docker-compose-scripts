@@ -1,0 +1,16 @@
+services:
+  ibmmq-service:
+    container_name: ibmmq
+    image: icr.io/ibm-messaging/mq:latest
+    network_mode: bridge
+    ports:
+      - 1414:1414
+      - 19443:9443
+#    volumes:
+#      - /mqdata:/mnt/mqm
+    environment:
+      - MQ_DEV=true
+      - MQ_QMGR_NAME=QMBR1
+      - MQ_ADMIN_PASSWORD=passw0rd
+      - MQ_APP_PASSWORD=passw0rd
+      - LICENSE=accept
