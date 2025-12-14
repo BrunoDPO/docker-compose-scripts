@@ -1,0 +1,13 @@
+services:
+  metube-service:
+    image: ghcr.io/alexta69/metube
+    container_name: metube
+    network_mode: bridge
+    restart: unless-stopped
+    ports:
+      - 18081:8081
+    volumes:
+      - /tmp/downloads:/downloads
+      - /var/cookies:/cookies
+    environment:
+      - YTDL_OPTIONS={"cookiefile":"/cookies/cookies.txt"}
