@@ -5,5 +5,5 @@ services:
     restart: unless-stopped
     network_mode: bridge
     ports:
-      - 3000:3000
-      - 3001:3001
+      - 3000:3000  # HTTP Interface
+      - 3001:3001  # HTTPS Interface
