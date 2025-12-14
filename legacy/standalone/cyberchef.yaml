@@ -1,0 +1,7 @@
+services:
+  cyberchef-service:
+    container_name: cyberchef
+    image: ghcr.io/gchq/cyberchef:latest
+    network_mode: bridge
+    ports:
+      - 8081:80
