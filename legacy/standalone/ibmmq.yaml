@@ -4,8 +4,8 @@ services:
     image: icr.io/ibm-messaging/mq:latest
     network_mode: bridge
     ports:
-      - 1414:1414
-      - 19443:9443
+      - 1414:1414   # Queue Manager
+      - 19443:9443  # Web Interface
 #    volumes:
 #      - /mqdata:/mnt/mqm
     environment:
