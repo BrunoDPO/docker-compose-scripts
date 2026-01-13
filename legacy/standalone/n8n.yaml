@@ -1,7 +1,7 @@
 services:
   n8n-service:
     container_name: n8n
-    image: rabbitmq:4-management
+    image: docker.n8n.io/n8nio/n8n
     network_mode: bridge
     ports:
       - 5678:5678
