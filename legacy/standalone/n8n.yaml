@@ -12,6 +12,7 @@ services:
       - TZ="America/Sao_Paulo"
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
       - N8N_RUNNERS_ENABLED=true
-  volumes:
-    n8n_data:
-      external: true
+      - N8N_SECURE_COOKIE=false
+volumes:
+  n8n_data:
+    external: true
