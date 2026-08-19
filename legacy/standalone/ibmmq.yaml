@@ -6,11 +6,13 @@ services:
     ports:
       - 1414:1414   # Queue Manager
       - 19443:9443  # Web Interface
-#    volumes:
-#      - /mqdata:/mnt/mqm
+    volumes:
+      - mqdata:/mnt/mqm
     environment:
       - MQ_DEV=true
       - MQ_QMGR_NAME=QMBR1
       - MQ_ADMIN_PASSWORD=passw0rd
       - MQ_APP_PASSWORD=passw0rd
       - LICENSE=accept
+volumes:
+  mqdata:
